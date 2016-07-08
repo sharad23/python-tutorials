@@ -1,0 +1,6 @@
+class Test():
+    def myname(self):
+       print 'My name is sharad'
+    
+t1 = Test()
+t1.myname()

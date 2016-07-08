@@ -1,0 +1,17 @@
+import multiprocessing
+
+def fingerprint_directory(path, extensions, nprocesses=None):
+	# Try to use the maximum amount of processes if not given.
+	try:
+	    nprocesses = nprocesses or multiprocessing.cpu_count()
+	except NotImplementedError:
+	    nprocesses = 1
+	else:
+	    nprocesses = 1 if nprocesses <= 0 else nprocesses
+
+	print nprocesses
+
+
+fingerprint_directory('/','mp3')
+
+
